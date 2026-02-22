@@ -1,13 +1,36 @@
+import Link from "next/link";
+import { getAllEntries } from "@/lib/content";
+
 export default function Projects() {
+  const entries = getAllEntries("projects");
+
   return (
     <div>
       <h1>projects</h1>
-      {/* TODO: add your projects here */}
       <p className="muted">{"{your projects description here}"}</p>
 
       <hr />
 
-      <p className="muted">{"{projects go here}"}</p>
+      {entries.length === 0 ? (
+        <p className="muted">nothing here yet.</p>
+      ) : (
+        entries.map((entry) => {
+          const stack = entry.stack as string[] | undefined;
+          return (
+            <div className="item" key={entry.slug}>
+              <div className="item-title">
+                <Link href={`/projects/${entry.slug}`}>{entry.title}</Link>
+              </div>
+              {entry.description && (
+                <div className="item-desc">{entry.description}</div>
+              )}
+              {stack && (
+                <div className="item-date">{stack.join(", ")}</div>
+              )}
+            </div>
+          );
+        })
+      )}
     </div>
   );
 }
