@@ -1,0 +1,37 @@
+---
+title: "Finder Searchbar"
+date: 2026-01-23
+description: "improving finder / spotlight search"
+---
+
+What problem does this solve?  
+Finder search kinda sucks. [ftnote – actually it has gotten somewhat better with the latest update]. I always have a bunch of irrelevant modules / sysfiles / logs showing up, and it's hard to find what I'm looking for.
+
+Time spent?     
+3 hrs
+
+Description  
+This is a raycast extension for minimal file search. It's quite opinionated, but it works for me. Features:
+- Keyboard shortcut to launch
+- 'Enter' reveals the file in finder, 'Cmd + Enter' opens it directly
+
+Design decisions
+I built on top of Raycast, because I didn't want to design the UI myself.
+I like *fiewing* files in finder, just not *searching* for them there!
+- Many niceties – preview, view metadata, etc
+- => Enter defaults to *view in finder*
+Better search
+- Search is limited to Documents & Downloads (which is where 95% of my relevant files are)
+- Claude generated a *bunch* of file-pattern exclusions, to get rid of logs / build files / internal scrapes / etc
+- Simple sorting by subword match
+
+
+[22nd Feb] Do I use this?
+Yeah! The latest version of Finder *has* improved and is more expressive. But for quick, simple file search, I generally default to this.
+
+
+Images:
+
+<Figure src="/images/screenshot.png" caption="a screenshot of the project" />
+
+<Video src="/videos/demo.mp4" caption="quick demo" />

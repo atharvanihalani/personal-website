@@ -1,0 +1,32 @@
+---
+title: "History Search"
+date: 2026-01-26
+description: "better history search for chromium browsers"
+---
+
+What problem does this solve?  
+You can't filter by date in Chrome's history. That's absurd. If I wanted to find something from 6 months ago, that's impossible unless I know exactly what I'm looking for.
+
+Time spent?     
+~45 mins
+
+Description  
+This is a web page that's always running locally. For me, it's strictly better than Chrome's / Arc's history. 
+Turns out Chromium browsers store history locally in a single .db file. You can just read from this, and create custom search tools on top.
+- Can filter by start / end date range
+- If you have multiple profiles, you can filter by them
+- Lets you manually refresh the history cache (though you could automate this with a cron job too)
+- Added a simple dedup pass to filter out identical, subsequent URLs
+
+[22nd Feb] Do I use this?
+Yeah!! This has superseded my default Arc history search. Search-by-date has actually, practically helped me on a few occasions. It slots in very easily.
+
+Learnings / Reflections
+Good search gives you many different ways to query your information structure. 
+
+
+Images:
+
+<Figure src="/images/screenshot.png" caption="a screenshot of the project" />
+
+<Video src="/videos/demo.mp4" caption="quick demo" />
