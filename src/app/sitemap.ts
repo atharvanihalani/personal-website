@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://atharva.dev";
+  const base = "https://anihalani.com";
   const now = new Date();
 
   const staticRoutes = ["", "/about", "/projects", "/essays", "/ai-safety", "/journal"];
