@@ -1,9 +1,17 @@
+import fs from "fs";
+import path from "path";
+import MDXContent from "@/components/mdx-content";
+
 export default function Home() {
+  const source = fs.readFileSync(
+    path.join(process.cwd(), "content/home.mdx"),
+    "utf-8"
+  );
+
   return (
     <div>
       <h1>atharva</h1>
-      {/* TODO: write your intro — a few lines about who you are and what this site is */}
-      <p>{"{your intro here}"}</p>
+      <MDXContent source={source} />
     </div>
   );
 }
