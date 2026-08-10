@@ -3,7 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "atharva",
+  title: "Atharva Nihalani",
   description: "personal site",
 };
 
@@ -17,11 +17,9 @@ export default function RootLayout({
       <body>
         <div className="container">
           <nav style={{ marginBottom: "2rem" }}>
-            <Link href="/">home</Link>
-            <Link href="/projects">projects</Link>
-            <Link href="/essays">essays</Link>
-            <Link href="/ai-safety">ai safety</Link>
-            <Link href="/journal">journal</Link>
+            <Link href="/">Home</Link>
+            <Link href="/projects">Projects</Link>
+            <Link href="/journal">Journal</Link>
           </nav>
           {children}
         </div>

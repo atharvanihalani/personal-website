@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>atharva</h1>
+      <h1>Atharva Nihalani</h1>
       <MDXContent source={source} />
     </div>
   );

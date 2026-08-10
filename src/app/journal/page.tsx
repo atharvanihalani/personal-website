@@ -6,7 +6,7 @@ export default function Journal() {
 
   return (
     <div>
-      <h1>journal</h1>
+      <h1>Journal</h1>
       <p className="muted">{"reflections on process / work"}</p>
 
       <hr />

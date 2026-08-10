@@ -6,8 +6,8 @@ export default function Projects() {
 
   return (
     <div>
-      <h1>projects</h1>
-      <p className="muted">{"i like designing tools and systems. these are some of my creations with software."}</p>
+      <h1>Projects</h1>
+      <p className="muted">{"i like designing tools and systems. these are some of my software creations."}</p>
 
       <hr />
 
